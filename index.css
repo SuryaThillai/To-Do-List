@@ -9,7 +9,6 @@ body{
 }
 
 .container{
-    /* background-color: lightblue; */
     position: absolute;
     left: 38%;
     top: 20%;
@@ -18,6 +17,7 @@ body{
     border-radius: 20px;
     padding: 20px;
     background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    max-height: 600px;
 }
 .input-btn{
     background-color: white;
@@ -64,22 +64,34 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .unchecked{
+    content: url(./Images/unchecked.png);
     height: 30px;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
-.task{
-    cursor: pointer;
+.checked{
+    content: url(./Images/checked.png);
+    height: 30px;
+    cursor: pointer; 
 }
+
+/* .task{
+    cursor: pointer;
+} */
 
 .cross{
+    content: url(./Images/cross.png);
     height: 20px;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.cross:active{
+    transform: scale(0.93);
 }
 
 .cross:hover{
@@ -90,3 +102,8 @@ body{
 }
 
 
+.error{
+    font-size: 14px;
+    color: red;
+    padding-top: 5px;
+}
